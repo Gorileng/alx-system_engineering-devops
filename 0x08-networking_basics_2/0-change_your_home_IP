@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
-# Script configures Ubuntu server with
-# localhost resolving to 127.0.0.2
-# facebook.com resolving to 8.8.8.8
+# Script configure the Ubuntu server with the 
+# localhost that resolves to 127.0.0.2
+# facebook.com resolves to the 8.8.8.8
 
 cp /etc/hosts ~/hosts.new
 sed -i s/127.0.0.1/127.0.0.2/ ~/hosts.new
