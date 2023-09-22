@@ -7,13 +7,13 @@
 #  1. command line options
 #  2. user-specific file
 #  3. system-wide file
-# Any of the configuration value will only alter the for first time is set.
+# Any of the configuration value will only alter for first time is set.
 # Consequently, the host-specific definitions will be at the beginning of 
 # configuration file, and the defaults will be at the end.
 
-# The site-wide defaults for the commonly used options.  The comprehensive
+# The site-wide defaults for commonly used options.  The comprehensive
 # list of the available options, the meanings and defaults, kindly see the
-# ssh_config(5) of the man page.
+# ssh_config(5) of the main page.
 
 Host *
 #   ForwardAgent no
