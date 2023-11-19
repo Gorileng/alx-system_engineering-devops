@@ -1,0 +1,28 @@
+##
+# You should look at the following URL's in order to grasp the solid understanding
+# of Nginx configuration files in order to fully unleash a power of Nginx.
+# http://wiki.nginx.org/Pitfalls
+# http://wiki.nginx.org/QuickStart
+# http://wiki.nginx.org/Configuration
+#
+# Generally, you would want to move this file elsewhere, and start with the clean
+# file but keep this around for the reference. Or just disable in the sites-enabled.
+#
+# Please see the /usr/share/doc/nginx-doc/examples/ for more detailed examples.
+##
+
+# Defaults server configuration
+#
+server {
+        listen 80 default_server;
+        listen [::]:80 default_server;
+
+        location /airbnb-onepage/ {
+                proxy_pass http://127.0.0.1:5000;
+        }
+
+        location ~ ^/airbnb-dynamic/number_odd_or_even/(\d+)$ {
+                proxy_pass http://127.0.0.1:5001/number_odd_or_even/$1;
+        }
+
+}
